@@ -1,0 +1,94 @@
+﻿@using AppDev3BProj.Models
+
+@{
+    ViewBag.Title = "Home";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SmartPixels</title>
+    <link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+    <script>
+        $(document).ready(function () {
+            $('a[href*=#]').each(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    && location.hostname == this.hostname
+                    && this.hash.replace(/#/, '')) {
+                    var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                    if ($target) {
+                        var targetOffset = $target.offset().top;
+
+                        $(this).click(function () {
+                            $("#nav li a").removeClass("active");
+                            $(this).addClass('active');
+                            $('html, body').animate({ scrollTop: targetOffset }, 600);
+                            return false;
+                        });
+                    }
+                }
+            });
+
+        });
+
+    </script>
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header id="header">
+        <div class="content">
+            <nav id="nav">
+                <ul>
+                    <li><a href="#slide1" class="active" title="Home">Home</a></li>
+                    <li><a href="#slide2" title="Upload">Upload Photo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="slide1">
+        <div class="slide_content">
+            <h1 class="slide_h1">Artificial Intelligence</h1>
+            <div id="divider"> </div>
+            <h2 class="slide_h2">Microsoft Cognitive Services</h2>
+            <div id="ribbon"></div>
+        </div>
+    </div>
+    <div id="slide2">
+        <div class="slide_container">
+            <img src="~/Images/ai14.png" style="width:300px; height:300px; float:right; margin-left:100px;" />
+            <h3 class="slide_heading">
+                Upload a Photo<br />
+            </h3>
+            <p class="text">
+                Using Microsoft Cognitive Services in conjunction with the Computer Vision API, this application will generate the most accurate description for your uploaded picture as well as its Visual features.<br />
+                <br />Proceed to browse and select an image of your choice by clicking the button below.
+            </p>
+
+            <button type="button" class="button button-success" onclick="location.href='@Url.Action("Index", "Blob")'">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Try it for Yourself
+            </button>
+        </div>
+    </div>
+    <div>
+        <footer id="copyright">
+            <p>&copy; @DateTime.Now.Year - SmartPixels</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>

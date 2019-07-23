@@ -1,0 +1,255 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.slide_h1 {
+    font-family: "Arvo";
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-shadow: 6px 2px 2px #121212;
+}
+
+.slide_h2 {
+    font-family: Oswald;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    /*color: #fff;
+    margin: 0;
+    padding: 0;*/
+    text-shadow: 4px 1px 2px #121212;
+}
+
+.slide_h3 {
+    font-family: Oswald;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    color: #333;
+    /*text-shadow: 4px 1px 2px #121212;*/
+    /*float:right;*/
+}
+
+.text {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    margin: 50px auto;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.slide_content {
+    margin: 0 auto;
+    width: 960px;
+    height: 600px;
+}
+
+.gallery-content {
+    padding: 20px 0 20px 20px;
+    margin: 0 auto;
+    align-self: center;
+    width: 1100px;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    width: 100%;
+    background: url('../Images/header-bg.png');
+    /*background-color: rgba(0, 161, 255, 0.60);*/
+    height: 80px;
+    position: fixed;
+    margin-top: 0px;
+}
+
+#nav {
+    width: 410px;
+    float: left;
+    margin-top: 20px;
+}
+
+#nav ul {
+    list-style: none;
+    display: block;
+    margin: 0 auto;
+    list-style: none;
+}
+
+#nav li {
+    margin-top: 9px;
+    float: left;
+    padding-left: 21px;
+}
+
+    #nav li a {
+        color: #fff;
+        opacity: 0.6;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: 'Wellfleet';
+    }
+
+        #nav li a.active {
+            color: #fff;
+            opacity: 1;
+            border-bottom: 2px solid #fff;
+        }
+
+        #nav li a:hover {
+            color: #fff;
+            opacity: 1;
+        }
+
+.slide_heading {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: left;
+    margin: 50px auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    /*-moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none*/
+}
+
+.button-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+
+.button:hover, .button:focus {
+    color: #333;
+    text-decoration: none
+}
+
+.slide_container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+#divider {
+    background: url('../Images/divider.png')no-repeat;
+    width: 300px;
+    height: 35px;
+    margin: 0px auto 27px auto;
+}
+
+#ribbon {
+    background: url('../Images/ribbon.png')no-repeat;
+    width: 251px;
+    height: 48px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -38px;
+}
+
+#slide1, #slide2 {
+    width: 100%;
+}
+
+#slide1 {
+    background: url('../Images/ai22.png') 50% 0 no-repeat fixed;
+    color: #fff;
+    height: 330px;
+    margin: 0;
+    padding: 240px 0 100px 0;
+    background-size: cover;
+}
+
+
+#slide2 {
+    background: url('../Images/bg4.jpg') 50% 0 no-repeat fixed;
+    /*background-color: dimgrey;*/
+    color: #575252;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0;
+    /*text-align: center;*/
+    /*background-position: right;*/
+    background-size: cover;
+}
+
+.thumbnail {
+    width: 250px;
+    /*max-width: 210px;*/
+    height: 230px;
+    /*max-height: 200px;*/
+    padding: 10px;
+}
+
+#copyright {
+    background-color: #6f6e6e;
+    color: #fff;
+    font-family: "Wellfleet";
+    padding: 9px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.heading {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: normal;
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    margin: 50px auto;
+}
+
+.bg {
+    background: url('../Images/ai38.png') 50% 0 no-repeat fixed;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.image_description {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    height: 100%;
+    margin: 20px 30px 20px 40px;
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}

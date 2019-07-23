@@ -1,0 +1,71 @@
+﻿@using AppDev3BProj.Models
+
+@{
+    ViewBag.Title = "Upload";
+}
+<button type="button" class="button btn-danger pull-right" onclick="location.href='@Url.Action("Home", "Blob")'">
+    <span class="btn-label"></span><img src="~/Images/close.png" />
+</button>
+
+<h2 class="heading">Upload a Picture</h2>
+
+<div style="padding-top: 24px">
+    <div class="row">
+        <div class="col-sm-8">
+            @using (Html.BeginForm("Upload", "Blob", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="file" id="upload" style="display: none" onchange="$('#submit').click();" />
+                <input type="button" value="Browse" class="btn btn-success btn-lg" onclick="$('#upload').click();" />
+                <input type="submit" id="submit" style="display: none" />
+            }
+        </div>
+        <div class="col-sm-4 pull-right">
+            @using (Html.BeginForm("Search", "Blob", FormMethod.Post, new { enctype = "multipart/form-data", @class = "navbar-form" }))
+            {
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search photos" name="term" value="@ViewBag.Search" style="max-width: 800px">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+            @foreach (BlobInfo blob in ViewBag.Blobs)
+            {
+                <div class="image_description">
+                    <a href="@blob.ImageUri" rel="lightbox" title="Description : @blob.Caption">
+                        <img src="@blob.ThumbnailUri" title="@blob.Caption" class="thumbnail" />
+                    </a>
+                    <br />
+                    <div>
+                        <p> <b>Description :</b> @blob.Caption </p>
+                        <p> <b>Tags : </b> @blob.Tags </p>
+                        <p> <b>Height : </b> @blob.Height </p>
+                        <p> <b>Width : </b> @blob.Width </p>
+                        <p> <b>Format : </b> @blob.Format </p>
+                        <p> <b>Black and White : </b> @blob.BlackWhite </p>
+                        <p> <b>Foreground Color : </b> @blob.ForegroundColor </p>
+                        <p> <b>Background Color : </b> @blob.BackgroundColor </p>
+                        <p> <b>Dominant Color : </b> @blob.Colors </p>
+                    </div>
+               </div>
+            }
+    </div>
+</div>
+
+
+@*@section scripts
+        {
+        <script type="text/javascript" language="javascript">
+                if ("@TempData["Message"]" !== "") {
+                    alert("@TempData["Message"]");
+                }
+        </script>
+    }*@
